@@ -5,7 +5,7 @@ const News = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/everything?q=Apple&from=last month&sortBy=recent first&apiKey=a11f8918c29147de90e41e9f412ab3e3&pageSize=6`
+      `https://newsapi.org/v2/everything?q=Apple&from=last month&sortBy=recent first&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=6`
     )
       .then((response) => response.json())
       .then((data) => {
